@@ -18,7 +18,7 @@ export default class Underline extends Plugin {
       hotkeys: [
         {
           modifiers: ["Mod"],
-          key: "u",
+          key: "r",
         },
       ],
     });
@@ -49,14 +49,14 @@ export default class Underline extends Plugin {
     var startText = editor.getRange(Cursor(fos), Cursor(fos + 3));
     var endText = editor.getRange(Cursor(tos - 4), Cursor(tos));
 
-    if (beforeText === "<u>" && afterText === "</u>") {
+    if (beforeText === "<center>" && afterText === "</center>") {
       //=> undo underline (inside selection)
 
       editor.setSelection(Cursor(fos - 3), Cursor(tos + 4));
       editor.replaceSelection(`${selectedText}`);
       // re-select
       editor.setSelection(Cursor(fos - 3), Cursor(tos - 3));
-    } else if (startText === "<u>" && endText === "</u>") {
+    } else if (startText === "<center>" && endText === "</center>") {
       //=> undo underline (outside selection)
       
       editor.replaceSelection(editor.getRange(Cursor(fos + 3), Cursor(tos - 4)));
