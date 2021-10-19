@@ -1,7 +1,7 @@
 {
-  "name": "obsidian-underline",
+  "name": "obsidian-center",
   "version": "1.0.0",
-  "description": "Add underline with shortcut",
+  "description": "Add center with shortcut",
   "main": "main.js",
   "scripts": {
     "dev": "rollup --config rollup.config.js -w",
